@@ -1,0 +1,76 @@
+header h2 {
+  text-align: center;
+  color: white;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.books_content {
+  transition: 1s;
+  width: 60%;
+  min-height: 70vh;
+  background-color: rgba(251, 251, 251, 0.5);
+  border-radius: 5%;
+  padding: 35px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  .book_add {
+      height: 200px;
+      width: 200px;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 2px dashed black;
+      text-align: center;
+      transition: 1s;
+      &:hover {
+        h2 {
+            opacity: 1;
+        }
+      }
+      h2 {
+        transition: .3s;
+        padding: 35px 10px;
+        opacity: 0.5;
+      }
+  }
+}
+
+.book {
+  height: 200px;
+  width: 200px;
+  background: rgba(251, 251, 251, 0.6);
+  border-radius: 8%;
+  word-wrap: break-word;
+  position: relative;
+  animation: identifier 1s;
+  &:hover {
+      cursor: pointer;
+  }
+  border: black 2px solid;
+  h1 {
+    margin: 0;
+    color: black;
+    text-align: center;
+    padding: 25px;
+  }
+  .book_delete {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+  }
+}
+
+@keyframes identifier {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
